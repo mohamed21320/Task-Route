@@ -1,0 +1,33 @@
+<section class="container w-75 mt-5">
+    <input
+    type="search"
+    class="form-control w-75 mx-auto my-3"
+    placeholder="Search By Name ..."
+    [(ngModel)]="searchText"
+  />
+  <table class="table" >
+    <thead class="text-center" >
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+           
+        </tr>
+    </thead>
+    <tbody class="text-center "   >
+          
+            <tr *ngFor="let item of customerData |search:searchText "  >
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                
+                
+            </tr>
+</tbody>
+</table>
+
+</section>
+
+
+
+
+
+
